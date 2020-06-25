@@ -1,0 +1,31 @@
+{
+  "name": "new",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.6",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/node": "^8.10.61",
+    "@types/validate.js": "^0.11.0",
+    "ts-node": "3.3.0",
+    "typescript": "3.3.3333",
+    "validate-typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.18.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.25",
+    "validate.js": "^0.13.1",
+    "yarm": "^0.4.0"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  }
+}
