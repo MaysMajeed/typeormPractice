@@ -12,11 +12,11 @@ export default class userController {
   }
   static async signUp(req, res) {
     const check = await validate(req.body, TSvalidation.signUpValidation);
-
     const checkFound = User.findOne({ email: req.body.email });
+
     if (check) {
       return res.status(400).send(check);
-    } else if (checkFound) {
+    } else if (!checkFound) {
       return res.status(400).send("Email already exist!");
     } else {
       let password = req.body.password;
