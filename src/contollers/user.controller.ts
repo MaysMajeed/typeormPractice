@@ -16,7 +16,7 @@ export default class userController {
 
     if (check) {
       return res.status(400).send(check);
-    } else if (!checkFound) {
+    } else if (checkFound) {
       return res.status(400).send("Email already exist!");
     } else {
       let password = req.body.password;
