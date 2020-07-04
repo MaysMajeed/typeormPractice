@@ -42,12 +42,12 @@ export default class userController {
       findUser.password
     );
 
-    if (checkLogining) {
-      return res.status(400).send(checkLogining);
-    } else if (!findUser) {
+    if (!findUser) {
       return res.status(400).send("Invalid username or password!");
     } else if (!checkPassword) {
       return res.status(400).send("Invalid username or password!");
+    } else if (checkLogining) {
+      return res.status(400).send(checkLogining);
     } else {
       const token = jwt.sign({ userID: findUser.id }, process.env.JWTSecret);
       res.send("you are authorized to login with the below token: " + token);
